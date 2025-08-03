@@ -1,5 +1,7 @@
 # Мобильное приложение для записи и анализа сновидений "Ловец снов"
 
+Приложение для дипломной работы. Это мобильное приложение для Android, написанное на языке Java.
+
 <img width="1400" height="1047" alt="image" src="https://github.com/user-attachments/assets/f9ca9562-a500-4315-ac7b-55d656098551" />
 
 <img width="1400" height="1047" alt="image" src="https://github.com/user-attachments/assets/c7658bd8-a3ac-471d-a863-a604536c11fa" />
