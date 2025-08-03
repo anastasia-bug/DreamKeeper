@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ловец снов</string>
+    <string-array name="lucidity_levels">
+        <item>Нет</item>
+        <item>Низкая</item>
+        <item>Средняя</item>
+        <item>Высокая</item>
+        <item>Полная</item>
+    </string-array>
+</resources>

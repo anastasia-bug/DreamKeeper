@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_dream_list">
+
+    <!-- Список снов -->
+    <fragment
+        android:id="@+id/navigation_dream_list"
+        android:name="com.example.dreamkeeper.DreamListFragment"
+        tools:layout="@layout/fragment_dream_list" >
+        <action
+            android:id="@+id/action_dreamList_to_dreamDetail"
+            app:destination="@id/navigation_dream_detail" />
+        <action
+            android:id="@+id/action_dreamList_to_editDream"
+            app:destination="@id/navigation_add_dream"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_dreamList_to_filter"
+            app:destination="@id/navigation_filter" />
+    </fragment>
+
+    <!-- Добавление / редактирование сна -->
+    <fragment
+        android:id="@+id/navigation_add_dream"
+        android:name="com.example.dreamkeeper.EditDreamFragment"
+        tools:layout="@layout/fragment_edit_dream" >
+        <action
+            android:id="@+id/action_editDream_to_tagSelection"
+            app:destination="@id/navigation_tag_selection" />
+    </fragment>
+
+    <!-- Детали сна -->
+    <fragment
+        android:id="@+id/navigation_dream_detail"
+        android:name="com.example.dreamkeeper.DreamDetailFragment"
+        tools:layout="@layout/fragment_dream_detail" >
+        <action
+            android:id="@+id/action_dreamDetail_to_editDream"
+            app:destination="@id/navigation_add_dream" />
+    </fragment>
+
+    <!-- Статистика -->
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.dreamkeeper.StatisticsFragment"
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_statistics_to_filter"
+            app:destination="@id/navigation_filter" />
+    </fragment>
+
+    <!-- Настройки -->
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.dreamkeeper.SettingsFragment"
+        tools:layout="@xml/root_preferences" >
+        <action
+            android:id="@+id/action_settings_to_tagList"
+            app:destination="@id/navigation_tag_list" />
+    </fragment>
+
+    <!-- Список тегов -->
+    <fragment
+        android:id="@+id/navigation_tag_list"
+        android:name="com.example.dreamkeeper.TagListFragment"
+        tools:layout="@layout/fragment_tag_list" />
+
+    <!-- Выбор тегов (BottomSheetDialogFragment) -->
+    <fragment
+        android:id="@+id/navigation_tag_selection"
+        android:name="com.example.dreamkeeper.TagSelectionFragment"
+        tools:layout="@layout/fragment_tag_selection" />
+
+    <!-- Фильтр -->
+    <fragment
+        android:id="@+id/navigation_filter"
+        android:name="com.example.dreamkeeper.FilterFragment"
+        tools:layout="@layout/fragment_filter" />
+
+</navigation>

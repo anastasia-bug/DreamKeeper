@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@android:drawable/ic_menu_search" />
+    <item
+        android:drawable="@drawable/red_dot"
+        android:top="2dp"
+        android:right="2dp"
+        android:gravity="end|top" />
+</layer-list>

@@ -1,0 +1,73 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Уведомления">
+
+        <SwitchPreferenceCompat
+            android:key="reminder_enabled"
+            android:title="Напоминания записать сон"
+            android:summary="Включить ежедневные напоминания" />
+
+        <Preference
+            android:key="reminder_time"
+            android:title="Время напоминания"
+            android:summary="Выберите время"
+            android:dependency="reminder_enabled" />
+
+<!--        <SwitchPreferenceCompat-->
+<!--            android:key="enable_reality_checks"-->
+<!--            android:title="Проверки реальности"-->
+<!--            android:summary="Включить напоминания в течение дня" />-->
+
+<!--        <Preference-->
+<!--            android:key="reality_check_settings"-->
+<!--            android:title="Настройка проверок реальности"-->
+<!--            android:summary="Выберите время и интервал"-->
+<!--            android:dependency="enable_reality_checks" />-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Управление тегами">
+        <Preference
+            android:key="tag_list"
+            android:title="Список тегов"
+            android:summary="Открыть список тегов для просмотра и изменения" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Безопасность">
+
+        <SwitchPreferenceCompat
+            android:key="set_password"
+            android:title="Установить пароль"
+            android:summary="Ограничить доступ к приложению"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Внешний вид">
+        <ListPreference
+            android:key="theme_preference"
+            android:title="Тема"
+            android:summary="Выберите тему приложения"
+            android:entries="@array/theme_names"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="system" />
+
+<!--        <ListPreference-->
+<!--            android:key="language_preference"-->
+<!--            android:title="Язык"-->
+<!--            android:summary="Выберите язык приложения"-->
+<!--            android:entries="@array/lang_names"-->
+<!--            android:entryValues="@array/lang_values"-->
+<!--            android:defaultValue="system" />-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Информация">
+        <Preference
+            android:key="about"
+            android:title="О приложении"
+            android:summary="Данные и контакты для обратной связи" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
